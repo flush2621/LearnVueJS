@@ -21,11 +21,11 @@
           <router-view name="myHeader"></router-view>
         </td>
       </tr>
-      <tr>
+      <tr style="height:700px;">
         <td width="20%" style="background-color: thistle">
           <router-view name="mySiderbar"></router-view>
         </td>
-        <td width="80%" style="background-color: aquamarine">
+        <td width="80%" style="background-color: aquamarine;">
           <router-view name="myDetail"></router-view>
         </td>
       </tr>
@@ -47,6 +47,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 </style>

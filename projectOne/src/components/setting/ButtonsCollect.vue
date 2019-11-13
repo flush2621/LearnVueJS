@@ -57,7 +57,7 @@ export default {
     justify-items: center;
     /* 修改位置 */
     position: absolute;
-    top:200px;
+    top:150px;
     width: 300px;
     /* max-width: 400px; */
     margin: 0 auto;
