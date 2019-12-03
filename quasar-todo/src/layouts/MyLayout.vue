@@ -35,6 +35,33 @@
               Todo
             </q-item-section>
           </q-item>
+          <q-item to="/report" clickable v-ripple exact>
+            <q-item-section avatar>
+              <q-icon name="grid_on" />
+            </q-item-section>
+
+            <q-item-section>
+              Report
+            </q-item-section>
+          </q-item>
+          <q-item to="/barcode" clickable v-ripple exact>
+            <q-item-section avatar>
+              <q-icon name="filter_center_focus" />
+            </q-item-section>
+
+            <q-item-section>
+              Codigo
+            </q-item-section>
+          </q-item>
+          <q-item to="/upload" clickable v-ripple exact>
+            <q-item-section avatar>
+              <q-icon name="cloud_upload" />
+            </q-item-section>
+
+            <q-item-section>
+              Upload
+            </q-item-section>
+          </q-item>
           <q-item to="/help" clickable v-ripple exact>
             <q-item-section avatar>
               <q-icon name="help" />
@@ -49,19 +76,20 @@
 
       <q-img class="absolute-top" src="statics/mountains.jpg" style="height: 192px">
         <div class="absolute-bottom bg-transparent">
-          <q-avatar size="56px" class="q-mb-sm">
-            <img src="https://cdn.quasar.dev/img/boy-avatar.png">
+          <q-avatar size="60px" class="q-mb-sm">
+            <img src="statics/gd.jpg">
           </q-avatar>
           <div class="text-weight-bold">Chris</div>
-          <div>6651815@qq.com</div>
+          <div>魑魅魍魉</div>
         </div>
       </q-img>
     </q-drawer>
 
     <q-page-container>
-      <keep-alive> 
+      <router-view />
+      <!-- <keep-alive> 
         <router-view />
-      </keep-alive>
+      </keep-alive> -->
     </q-page-container>
   </q-layout>
 </template>
@@ -91,6 +119,6 @@ export default {
   height: 100%;
   z-index: -1;
   opacity: .2;
-  filter: grayscale(100%)
+  filter: grayscale(100%);
 }
 </style>

@@ -50,6 +50,12 @@
         </q-item-section>
       </q-item>
     </q-list>
+    <div class="no-tasks absolute-center" v-if="!tasks.length">
+      <q-icon name="check" color="primary" size="100px" />
+      <div class="text-h5 text-center text-primary">
+        No tasks
+      </div>
+    </div>
   </q-page>
 </template>
 
@@ -59,18 +65,18 @@ export default {
     return {
       newTask: '',
       tasks: [
-        {
-          title: 'Get bananas',
-          done: false
-        },
-        {
-          title: 'Eat bananas',
-          done: false
-        },
-        {
-          title: 'Poo bananas',
-          done: false
-        }
+        // {
+        //   title: 'Get bananas',
+        //   done: false
+        // },
+        // {
+        //   title: 'Eat bananas',
+        //   done: false
+        // },
+        // {
+        //   title: 'Poo bananas',
+        //   done: false
+        // }
       ]
     }
   },
@@ -91,6 +97,7 @@ export default {
         title: this.newTask,
         done: false
       })
+      this.newTask = ''
     }
   }
 }
@@ -101,5 +108,8 @@ export default {
       text-decoration: line-through;
       color: #bbb;
     }
+  }
+  .no-tasks{
+    opacity: .5;
   }
 </style>
