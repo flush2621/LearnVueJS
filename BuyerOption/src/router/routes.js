@@ -1,3 +1,4 @@
+import router from '.'
 
 const routes = [
   {
@@ -9,7 +10,7 @@ const routes = [
     children: [
       { path: '/current', component: () => import('pages/CurrentData.vue') },
       { path: '/upload', component: () => import('pages/Upload.vue') },
-      { path: '/help', component: () => import('pages/Help.vue') }
+      { path: '/help/:userId', props: true, component: () => import('pages/Help.vue') }
     ]
   }
 ]

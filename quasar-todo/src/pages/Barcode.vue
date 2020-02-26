@@ -36,7 +36,7 @@ export default {
 			model: null,
 			barcodes: '112',
       options: [
-        '10', '16', '84', '89'
+        '10', '07', '16', '84', '89'
       ]
 		}
 	},

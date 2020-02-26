@@ -30,43 +30,69 @@
             <q-item-section avatar>
               <q-icon name="list" />
             </q-item-section>
-
             <q-item-section>
               Todo
             </q-item-section>
           </q-item>
+
+          <q-item to="/dotey" clickable v-ripple exact>
+            <q-item-section avatar>
+              <q-icon name="face" />
+            </q-item-section>
+            <q-item-section>
+              Dotey
+            </q-item-section>
+          </q-item>
+
           <q-item to="/report" clickable v-ripple exact>
             <q-item-section avatar>
               <q-icon name="grid_on" />
             </q-item-section>
-
             <q-item-section>
               Report
             </q-item-section>
           </q-item>
+
           <q-item to="/barcode" clickable v-ripple exact>
             <q-item-section avatar>
               <q-icon name="filter_center_focus" />
             </q-item-section>
-
             <q-item-section>
               Codigo
             </q-item-section>
           </q-item>
+
           <q-item to="/upload" clickable v-ripple exact>
             <q-item-section avatar>
               <q-icon name="cloud_upload" />
             </q-item-section>
-
             <q-item-section>
               Upload
             </q-item-section>
           </q-item>
+
+          <q-item to="/wheels" clickable v-ripple exact>
+            <q-item-section avatar>
+              <q-icon name="attach_money" />
+            </q-item-section>
+            <q-item-section>
+              Roulette
+            </q-item-section>
+          </q-item>
+
+          <q-item to="/threejs" clickable v-ripple exact>
+            <q-item-section avatar>
+              <q-icon name="3d_rotation" />
+            </q-item-section>
+            <q-item-section>
+              Threejs
+            </q-item-section>
+          </q-item>
+
           <q-item to="/help" clickable v-ripple exact>
             <q-item-section avatar>
               <q-icon name="help" />
             </q-item-section>
-
             <q-item-section>
               Help
             </q-item-section>

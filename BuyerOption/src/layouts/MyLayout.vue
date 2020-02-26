@@ -48,7 +48,7 @@
           </q-item>
           <q-separator />
 
-          <q-item to="/help" clickable v-ripple exact>
+          <q-item to="/help/123" clickable v-ripple exact>
             <q-item-section avatar>
               <q-icon name="help" />
             </q-item-section>
