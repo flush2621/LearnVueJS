@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" router @select="handleSelect"> 
+    <el-menu :default-active="activeIndex" class="el-menu-demo" width="150px" style="background-color: rgb(238, 241, 246)" router> 
       <el-menu-item index="/home">首页</el-menu-item>
       <el-menu-item index="/rank">排行榜</el-menu-item>
       <el-menu-item index="/usercenter">个人中心</el-menu-item>
@@ -34,5 +34,18 @@ a{
 }
 .router-link-active{
   text-decoration: none;
+}
+.el-header {
+  background-color: #B3C0D1;
+  color: #333;
+  line-height: 60px;
+}
+
+.el-aside {
+  color: #333;
+}
+
+.el-menu-item{
+  padding-right: 100px !important;
 }
 </style>

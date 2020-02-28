@@ -1,25 +1,25 @@
 <template>
   <div id="app">
-    <tab></tab>
+    <!-- <mainContainer></mainContainer> -->
     <router-view/>
   </div>
 </template>
 
 <script>
-import Tab from './views/Tab'
+import MainContainer from './views/MainContainer'
 export default {
   name: 'App',
-  components:{
-    Tab
+  components: {
+    MainContainer
   }
 }
 </script>
 
 <style>
-*{
+/* *{
   margin: 0;
   padding: 0;
-}
+} */
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
