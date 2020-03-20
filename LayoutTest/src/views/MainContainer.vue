@@ -36,7 +36,7 @@ import Tab from '../views/Tab'
 
 <style scoped>
 .el-container {
-  height: 750px;
+  height: 785px;
   padding: 0;
   margin: 0;
   border: 1px solid #eee;

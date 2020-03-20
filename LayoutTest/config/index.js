@@ -10,7 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      // '/api': {
+      //   target: 'http://148.20.30.12:8081',//后端接口地址
+      //   changeOrigin: true,//是否允许跨越
+      //   pathRewrite: {
+      //       '^/api': '/maven_web',//重写,
+      //   }
+      // } 
+    },
 
     // Various Dev Server settings
     host: '0.0.0.0', // can be overwritten by process.env.HOST

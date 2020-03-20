@@ -3,28 +3,28 @@
     <div class="login">
       <el-card class="box-card">
         <div slot="header" class="colorblock">
-          <span class="title">登陆</span>
+          <span class="title">登&#12288录</span>
         </div>
         <!-- <div slot="header" class="clearfix">
           <span class="title">登陆</span>
         </div> -->
-        <table style="padding-left:20px;">
+        <table style="padding-left:20px;transform:translateY(-15px);">
           <tr>
-            <td align="right">用户名:</td>
+            <td align="left" style="color:white">用户名</td>
             <td>
               <el-input v-model="user.username" placeholder="请输入用户名"></el-input>
             </td>
           </tr>
           <tr>
-            <td align="right">密码:</td>
+            <td align="left" style="color:white;">密&#12288码</td>
             <td>
               <el-input type="password" v-model="user.password" placeholder="请输入密码" @keydown.enter.native="doLogin"></el-input>
             </td>
           </tr>
           <tr>
             <!-- 占两行 -->
-            <td colspan="2">
-              <el-button style="width:150px" type="primary" @click="doLogin">登陆</el-button>
+            <td colspan="2" style="padding-top:10px;">
+              <el-button style="width:150px" type="primary" @click="doLogin">登&#12288&#12288陆</el-button>
               <el-button style="width:150px" type="primary">忘记密码</el-button>
             </td>
           </tr>
@@ -45,8 +45,22 @@
       }
     },
     methods: {
+      open() {
+        this.$message('登陆失败,用户名或者密码有误!');
+      },
       doLogin() {
-        alert(JSON.stringify(this.user))
+        // alert(JSON.stringify(this.user))
+        // this.$http.post('/api/dataFactory',this.user).then((response) => {
+        // this.$http.get('http://148.20.30.12:8081/maven_web/dataFactory',this.user).then((response) => {
+        this.$http.post('http://148.20.30.12:8081/maven_web/dataFactory',this.user,{emulateJSON:true}).then((response) => {
+          let info = response.data
+          if(info.data.length)
+            this.$router.push('index')
+          else
+            this.open()
+        }).catch(function(response){
+          console.log('error')
+        })
       }
     }
   }
@@ -60,7 +74,7 @@
   .login{
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 200px;
   }
   .text {
     font-size: 14px;
@@ -71,7 +85,9 @@
     height: 50px;
     padding-top: 20px;
     transform: translate(-20px,-20px);
-    background: #7f8c8d;
+    background: linear-gradient(#fff1eb,#ace0f9);
+    /* background: linear-gradient(#243949,#517fa4); */
+    /* opacity: .9; */
   }
   .item {
     margin-bottom: 18px;
@@ -87,6 +103,8 @@
 
   .box-card {
     width: 400px;
-    background: #ecf0f1;
+    border-radius: 20px;
+    background:linear-gradient(to right, #bb313e25, #bb313e25, #d7222925, #dd4a1625, #e4761525, #f5c50025, #f0e92725, #b1ce2425, #48a93525, #03944525, #157c4f25, #176a5825, #1b556325, #1d386f25, #1d386f25, #20277825, #52266325, #8a244b25);
+    /* background: #d5f3f425; */
   }
 </style>

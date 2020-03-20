@@ -17,24 +17,32 @@ export default new Router({
       component: () => import('../views/Login')
     },
     {
-      path: '/helloworld',
-      name: 'hello',
-      component: HelloWorld
+      path: '/index',
+      name: 'index',
+      component: () => import('../views/MainContainer'),
+      children:[
+        {
+          path: '/home',
+          name: 'home',
+          component: () => import('../views/Home')
+        },
+        {
+          path: '/rank',
+          name: 'rank',
+          component: () => import('../views/Rank')
+        },
+        {
+          path: '/usercenter',
+          name: 'usercenter',
+          component: () => import('../views/UserCenter')
+        },
+        {
+          path: '/helloworld',
+          name: 'hello',
+          component: HelloWorld
+        }
+      ]
     },
-    {
-      path: '/home',
-      name: 'home',
-      component: () => import('../views/Home')
-    },
-    {
-      path: '/rank',
-      name: 'rank',
-      component: () => import('../views/Rank')
-    },
-    {
-      path: '/usercenter',
-      name: 'usercenter',
-      component: () => import('../views/UserCenter')
-    }
+    
   ]
 })
