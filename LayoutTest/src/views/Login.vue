@@ -52,12 +52,24 @@
         // alert(JSON.stringify(this.user))
         // this.$http.post('/api/dataFactory',this.user).then((response) => {
         // this.$http.get('http://148.20.30.12:8081/maven_web/dataFactory',this.user).then((response) => {
-        this.$http.post('http://148.20.30.12:8081/maven_web/dataFactory',this.user,{emulateJSON:true}).then((response) => {
+        // this.$http.post('http://148.20.30.12:8081/maven_web/dataFactory',this.user,{emulateJSON:true}).then((response) => {
+        // this.$http.post('http://148.20.30.12:8989/login/login2',this.user,{emulateJSON:true}).then((response) => {
+        //   let info = response.data
+        //   console.log(info)
+        //   if(info.data.length)
+        //     this.$router.push('index')
+        //   else
+        //     this.open()
+        // }).catch(function(response){
+        //   console.log('error')
+        // })
+        //****************//
+        // let params = new URLSearchParams() //RequestParam需要的类型，而RequestBody需要this.user
+        // params.append('username',this.user.username)
+        // params.append('password',this.user.password)
+        this.$ajax.post('/login/login2',this.user).then((response) => {
           let info = response.data
-          if(info.data.length)
-            this.$router.push('index')
-          else
-            this.open()
+          console.log(info)
         }).catch(function(response){
           console.log('error')
         })
