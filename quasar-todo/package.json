@@ -13,7 +13,7 @@
   "dependencies": {
     "@quasar/extras": "^1.0.0",
     "quasar": "^1.0.0",
-    "three": "^0.111.0",
+    "three": "^0.125.0",
     "three-orbitcontrols": "^2.110.3",
     "vue-axios": "^2.1.5",
     "vue-resource": "^1.5.1"
